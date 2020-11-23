@@ -9,14 +9,21 @@ class JobList extends React.Component {
         this.state = { 
             jobsArray: []
         }
+        this.getJobs = this.getJobs.bind(this);
     }
 
-componentDidMount(){
-    this.getJobs();
-}
+// componentDidMount(){
+//     this.getJobs();
+// }
+
+componentDidMount() {
+    fetch('https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?page=1&search=code')
+      .then(res => res.json())
+      .then(data => console.log(data))
+  }
 
 getJobs(){
-    Axios.get('https://thingproxy.freeboard.io/https://jobs.github.com/positions.json?page=1&search=code')
+    Axios.get('https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?page=1&search=code')
         .then(response => response.data)
         .then(data => {
             console.log(data);
