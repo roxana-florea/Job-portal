@@ -14,8 +14,8 @@ class App extends React.Component {
     return ( 
       <div>
         <h1>Hello Chucks</h1>
-        {/* <Input /> */}
-        {/* <Button /> */}
+        <Input />
+        <Button />
         <JobList />        
     </div>);
   }

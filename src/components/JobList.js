@@ -12,15 +12,15 @@ class JobList extends React.Component {
         this.getJobs = this.getJobs.bind(this);
     }
 
-// componentDidMount(){
-//     this.getJobs();
-// }
+componentDidMount(){
+    this.getJobs();
+}
 
-componentDidMount() {
-    fetch('https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?page=1&search=code')
-      .then(res => res.json())
-      .then(data => console.log(data))
-  }
+// componentDidMount() {
+//     fetch('https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?page=1&search=code')
+//       .then(res => res.json())
+//       .then(data => console.log(data))
+//   }
 
 getJobs(){
     Axios.get('https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?page=1&search=code')
@@ -38,9 +38,16 @@ getJobs(){
         return (  
             <div>
                 {
-                    this.state.jobsArray.map(jobObject => {
+                    this.state.jobsArray.map((jobObject) => {
                         return (
-                            <Job title = {jobObject.title}/>
+                            <Job 
+                                title = {jobObject.title} 
+                                type = {jobObject.type}
+                                location ={jobObject.location}
+                                company={jobObject.company}
+                                // key={index} 
+                                key={jobObject.id}
+                            />
                         )
                     } )
                 }
@@ -50,3 +57,4 @@ getJobs(){
 }
  
 export default JobList;
+// https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?page=1&search=code
