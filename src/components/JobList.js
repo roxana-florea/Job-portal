@@ -16,7 +16,7 @@ componentDidMount(){
 }
 
 getJobs(){
-    Axios.get('https://jobs.github.com/positions.json?page=1&search=code')
+    Axios.get('https://thingproxy.freeboard.io/https://jobs.github.com/positions.json?page=1&search=code')
         .then(response => response.data)
         .then(data => {
             console.log(data);
@@ -31,7 +31,11 @@ getJobs(){
         return (  
             <div>
                 {
-                    this.state.jobsArray.map(jobObject => <Job title = {jobObject.title}/>)
+                    this.state.jobsArray.map(jobObject => {
+                        return (
+                            <Job title = {jobObject.title}/>
+                        )
+                    } )
                 }
             </div>
             );
