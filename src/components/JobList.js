@@ -33,10 +33,15 @@ getJobs(){
         })
 }
 
+getJobResults = ()=>{
+    console.log('helooooo')
+}
 
     render() { 
         return (  
             <div>
+         <input placeholder="blabla"></input>
+         <button onClick={this.getJobResults}>btn</button>
                 {
                     this.state.jobsArray.map((jobObject) => {
                         return (
@@ -45,8 +50,8 @@ getJobs(){
                                 type = {jobObject.type}
                                 location ={jobObject.location}
                                 company={jobObject.company}
-                                // key={index} 
                                 key={jobObject.id}
+                               
                             />
                         )
                     } )

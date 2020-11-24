@@ -5,17 +5,16 @@ import Button from './components/Button';
 import JobList from './components/JobList';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {  }
-  }  
+
+
   
   render() { 
     return ( 
       <div>
         <h1>Hello Chucks</h1>
-        <Input />
-        <Button />
+        {/* <Input />
+        <Button /> */}
+        
         <JobList />        
     </div>);
   }
