@@ -34,9 +34,17 @@ getJobs(){
 }
 
 
+getJobResults = () => {
+    console.log("function is called");
+    
+}
+
+
     render() { 
         return (  
             <div>
+                <input type="text" placeholder="e.g Front-end development"></input>
+                <button onClick={this.getJobResults}>Search</button>
                 {
                     this.state.jobsArray.map((jobObject) => {
                         return (

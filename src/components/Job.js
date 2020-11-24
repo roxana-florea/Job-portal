@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-
+// Job Card
 const Job = ({title, type, company, location}) => {  
     return ( 
         <div>
