@@ -22,8 +22,18 @@ componentDidMount(){
 //       .then(data => console.log(data))
 //   }
 
+ // componentDidMount() {
+  //   fetch('https://api.chucknorris.io/jokes/random')
+  //     .then(response => response.json())
+  //     .then(data => this.setState({
+  //       sentence1: data.value
+  //     }))
+  //   
+  // }
+
+
 getJobs(){
-    Axios.get('https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?page=1&search=code')
+    Axios.get('https://remotive.io/api/remote-jobs')
         .then(response => response.data)
         .then(data => {
             console.log(data);
