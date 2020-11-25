@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
-import Input from './components/Input';
-import Button from './components/Button';
+// import Input from './components/Input';
+// import Button from './components/Button';
 import JobList from './components/JobList';
 
 class App extends React.Component {
