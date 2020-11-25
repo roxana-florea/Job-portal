@@ -7,6 +7,7 @@ class JobList extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 
+            text: '',
             jobsArray: []
         }
         this.getJobs = this.getJobs.bind(this);
@@ -33,9 +34,10 @@ getJobs(){
         })
 }
 
-getJobResults = ()=>{
-    console.log('helooooo')
-}
+// getJobResults = (ev)=>{
+  
+
+// }
 
     render() { 
         return (  
