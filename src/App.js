@@ -1,6 +1,7 @@
 import './App.css';
 import React from 'react';
 import JobList from './components/JobList';
+import SocialMediaLinks from './components/SocialMediaLinks';
 
 class App extends React.Component {
   constructor(props) {
@@ -11,9 +12,10 @@ class App extends React.Component {
   
   render() { 
     return ( 
-      <div>
-        <h1>Hello Chucks</h1>
-        <JobList />        
+      <div className="landing--page--container">
+        <h1>Hello Chucks</h1>        
+        <JobList /> 
+        <SocialMediaLinks />       
     </div>);
   }
 }
