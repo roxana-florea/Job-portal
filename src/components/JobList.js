@@ -34,7 +34,7 @@ filterTitles = (ev)=>{
 render() { 
     return (  
         <div>
-            <input type="text" placeholder="e.g Front-end development" onChange={this.filterTitles}></input>
+            <input className="joblist--input" type="text" placeholder="e.g Front-end development" onChange={this.filterTitles}></input>
             <button onClick={this.getJobs}>Search</button>
             {
                 this.state.jobsArray.filter((jobObject) => {
