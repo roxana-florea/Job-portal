@@ -89,6 +89,45 @@
   }
 
 
+  .social--media--account {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;    
+  }
+
+  .social--media--account h4,
+  .social--media--account button {
+    margin: 10px;
+  } 
+
+  /* =============
+   Components
+   ============= */
+
+.social--media--btn {
+  font-weight: 600;
+  background: #fff;
+  color:rgb(191, 85, 236);
+  border: none;
+  border-radius: 5px;
+  position: relative;
+  height: 40px;
+  /* width: 150px; */
+  font-size: 0.9rem;
+  padding: 0 20px;
+  cursor: pointer;
+  outline: none;
+  transition: 600ms ease all;   
+  /* box-shadow: 0 5px 15px rgba(0,0,0,0.20);   */
+}
+
+.social--media--btn:hover{
+  background:rgb(191, 85, 236);
+  color: #fff;
+}
+
+
 /* =============
    Media Queries
    ============= */
@@ -105,6 +144,13 @@
 @media (max-width: 480px) {
   .social-media {
     width: 300px;    
+  }
+
+  .social--media--account {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
   }
 }
 

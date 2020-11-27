@@ -23,7 +23,12 @@ export default function SocialMediaLinks() {
                     </a>
                 </li>
             </ul>
-            <h4>Don't have an account ? Sign up now!</h4>
+
+            <section className="social--media--account">
+                <h4>Don't have an account ?</h4>
+                <button className="social--media--btn">Sign up now!</button>
+            </section>         
+            
         </div>
     )
 }
