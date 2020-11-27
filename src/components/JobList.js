@@ -8,7 +8,8 @@ class JobList extends React.Component {
         super(props);
         this.state = { 
             keyword: '',
-            jobsArray: []
+            jobsArray: [],
+            description : false
         }
         this.getJobs = this.getJobs.bind(this);
     }
@@ -37,6 +38,22 @@ filterTitles = (ev)=>{
 //     this.getJobs();
 // }
 
+activateModal = ()=>{
+    this.setState({description: !this.state.description})
+}
+
+showModal = () => {
+    // this.setState({description: !this.state.description})
+    return (
+        <div>
+            {
+               this.state.description &&
+                <p>Hello world</p>
+            }
+        </div>
+    )
+}
+
 
 render() { 
     return (  
@@ -44,7 +61,7 @@ render() {
             <input type="text" placeholder="e.g Front-end development" onChange={this.filterTitles}></input>
             <button onClick={this.getJobs}>Search</button>
             {
-                this.state.jobsArray.filter((jobObject) => {
+                this.state.jobsArray.filter(jobObject => {
                     if (this.state.keyword === '') {
                         return jobObject;
                     } else if (
@@ -58,21 +75,30 @@ render() {
                 .map((jobObject) => {
                     return (
                         <Job
-                            title={jobObject.title}
+                    title={<a href="#" onClick={this.activateModal}>{jobObject.title}</a>}
                             logo={jobObject.salary}
                             type={jobObject.job_type.split('_').join(' ')}
                             location={jobObject.candidate_required_location}
                             company={jobObject.company_name}
-                            date={jobObject.publication_date}
+                            date={jobObject.publication_date.slice(0,10)}
                             // key={index}
                             key={jobObject.id}
+                            
                         />
+                        
                     );
+                    
                 })
+               
             }
+     
+
         </div>
+       
     );
+    
 }
+
 }
  
 export default JobList;
