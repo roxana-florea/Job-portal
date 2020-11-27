@@ -16,9 +16,12 @@
     border-radius: 50%;
     position: relative;
     font-size: 50px;
-    transform: rotate(45deg);
+
+    /* Rotate 45 deg and scale down */
+    transform: rotate(45deg) scale(0.8);
     overflow: hidden;
     transition: all .5s ease-in;
+   
   }
   
   #social-media-links li:before {
@@ -84,3 +87,32 @@
   #social-media-links li:nth-of-type(4):after {
     background: rgb(247, 202, 24);
   }
+
+
+/* =============
+   Media Queries
+   ============= */
+
+/* Tablet design */
+
+@media (max-width: 768px) {
+  .social-media {
+    width: 400px;    
+  }
+}
+
+/* Mobile design */
+@media (max-width: 480px) {
+  .social-media {
+    width: 300px;    
+  }
+}
+
+
+
+
+
+
+
+
+

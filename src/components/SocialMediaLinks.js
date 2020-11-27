@@ -1,7 +1,7 @@
 import React from 'react';
 import './SocialMediaLinks.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGoogle, faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons';
   
 export default function SocialMediaLinks() {
     return (
@@ -13,15 +13,13 @@ export default function SocialMediaLinks() {
                     </a>
                 </li>
                 <li>
-                    <a href="https://twitter.com/" 
-                       target="_blank"><FontAwesomeIcon 
-                       icon={faTwitter} />
+                    <a href="https://twitter.com/" target="_blank">
+                        <FontAwesomeIcon icon={faTwitter} />
                     </a>
                 </li>
                 <li>
-                    <a href="https://linkedin.com/" 
-                       target="_blank"><FontAwesomeIcon 
-                       icon={faLinkedin} />
+                    <a href="https://linkedin.com/" target="_blank">
+                        <FontAwesomeIcon icon={faLinkedin} />
                     </a>
                 </li>
             </ul>
