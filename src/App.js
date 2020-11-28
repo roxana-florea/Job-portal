@@ -1,21 +1,21 @@
 import './App.css';
 import React from 'react';
-// import Input from './components/Input';
-// import Button from './components/Button';
 import JobList from './components/JobList';
+import SocialMediaLinks from './components/SocialMediaLinks';
 
 class App extends React.Component {
-
-
+  constructor(props) {
+    super(props);
+    this.state = {  }
+  }
+  
   
   render() { 
     return ( 
-      <div>
-        <h1>Hello Chucks</h1>
-        {/* <Input />
-        <Button /> */}
-        
-        <JobList />        
+      <div className="landing--page--container">
+        <h1>Welcome to Chuks job portal!</h1>    
+        <JobList /> 
+        <SocialMediaLinks />      
     </div>);
   }
 }
