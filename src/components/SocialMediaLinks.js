@@ -8,17 +8,17 @@ export default function SocialMediaLinks() {
         <div className="social-media">
             <ul id="social-media-links">                  
                 <li>
-                    <a href="https://www.facebook.com/" target="_blank">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
                         <FontAwesomeIcon icon={faFacebook} />
                     </a>
                 </li>
                 <li>
-                    <a href="https://twitter.com/" target="_blank">
+                    <a href="https://twitter.com/" target="_blank" rel="noreferrer">
                         <FontAwesomeIcon icon={faTwitter} />
                     </a>
                 </li>
                 <li>
-                    <a href="https://linkedin.com/" target="_blank">
+                    <a href="https://linkedin.com/" target="_blank" rel="noreferrer">
                         <FontAwesomeIcon icon={faLinkedin} />
                     </a>
                 </li>
