@@ -15,7 +15,7 @@ class SearchNav extends Component {
         this.state = {
             searchUserInput: '',
             locationUserInput: '',
-            categoryUserChoice: 'Category'
+            categoryUserChoice: ''
         }
     }
 
