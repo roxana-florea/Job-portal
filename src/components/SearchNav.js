@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 import Dropdown from 'react-bootstrap/Dropdown';
-import Form from 'react-bootstrap/Form';
+// import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-
-
-
-
-
 
 class SearchNav extends Component {
     constructor(props) {
@@ -64,7 +59,7 @@ class SearchNav extends Component {
             <Dropdown onSelect={this.getCategoryUserChoice}>
                 <Dropdown.Toggle variant="success" id="dropdown-basic" >
                     {this.state.categoryUserChoice}
-  </Dropdown.Toggle>
+                </Dropdown.Toggle>
 
                 <Dropdown.Menu>
                     <Dropdown.Item eventKey="Software Development">Software Development</Dropdown.Item>

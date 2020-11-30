@@ -1,7 +1,8 @@
 import './App.css';
 import React from 'react';
-import JobList from './components/JobList';
-import SocialMediaLinks from './components/SocialMediaLinks';
+import LandingPage from './components/LandingPage'
+import Dashboard from './components/Dashboard'
+
 
 class App extends React.Component {
   constructor(props) {
@@ -16,10 +17,9 @@ class App extends React.Component {
     return ( 
       <div className="landing--page--container">
         <h1>Welcome to Chuks job portal!</h1> 
-          <LandingPage /> 
-          <Dashboard />           
-          {/* <JobList /> 
-          <SocialMediaLinks />       */}
+        <LandingPage /> 
+        <Dashboard />    
+          
     </div>);
   }
 }
