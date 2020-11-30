@@ -16,9 +16,12 @@
     border-radius: 50%;
     position: relative;
     font-size: 50px;
-    transform: rotate(45deg);
+
+    /* Rotate 45 deg and scale down */
+    transform: rotate(45deg) scale(0.8);
     overflow: hidden;
     transition: all .5s ease-in;
+   
   }
   
   #social-media-links li:before {
@@ -84,3 +87,78 @@
   #social-media-links li:nth-of-type(4):after {
     background: rgb(247, 202, 24);
   }
+
+
+  .social--media--account {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;    
+  }
+
+  .social--media--account h4,
+  .social--media--account button {
+    margin: 10px;
+  } 
+
+  /* =============
+   Components
+   ============= */
+
+.social--media--btn {
+  font-weight: 600;
+  background: #fff;
+  color:rgb(191, 85, 236);
+  border: none;
+  border-radius: 5px;
+  position: relative;
+  height: 40px;
+  /* width: 150px; */
+  font-size: 0.9rem;
+  padding: 0 20px;
+  cursor: pointer;
+  outline: none;
+  transition: 600ms ease all;   
+  /* box-shadow: 0 5px 15px rgba(0,0,0,0.20);   */
+}
+
+.social--media--btn:hover{
+  background:rgb(191, 85, 236);
+  color: #fff;
+}
+
+
+/* =============
+   Media Queries
+   ============= */
+
+/* Tablet design */
+
+@media (max-width: 768px) {
+  .social-media {
+    width: 400px;    
+  }
+}
+
+/* Mobile design */
+@media (max-width: 480px) {
+  .social-media {
+    width: 300px;    
+  }
+
+  .social--media--account {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+  }
+}
+
+
+
+
+
+
+
+
+

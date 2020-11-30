@@ -13,7 +13,8 @@ class App extends React.Component {
   render() { 
     return ( 
       <div className="landing--page--container">
-        <h1>Welcome to Chuks job portal!</h1>    
+        <h1>Welcome to Chuks job portal!</h1> 
+             
         <JobList /> 
         <SocialMediaLinks />      
     </div>);
