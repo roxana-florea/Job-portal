@@ -6,7 +6,9 @@ import SocialMediaLinks from './components/SocialMediaLinks';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {  }
+    this.state = { 
+      userStatus: false
+    }
   }
   
   
@@ -14,9 +16,10 @@ class App extends React.Component {
     return ( 
       <div className="landing--page--container">
         <h1>Welcome to Chuks job portal!</h1> 
-             
-        <JobList /> 
-        <SocialMediaLinks />      
+          <LandingPage /> 
+          <Dashboard />           
+          {/* <JobList /> 
+          <SocialMediaLinks />       */}
     </div>);
   }
 }
